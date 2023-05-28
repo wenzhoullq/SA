@@ -4,8 +4,10 @@ import math
 import random
 import bisect
 from simanneal import Annealer
-
-
+#  执行脚本
+# 1.pip install simanneal  # from pypi
+#
+# 2.pip install -e git+https://github.com/perrygeo/simanneal.git#egg=requests
 def distance(a, b):
     """Calculates distance between two latitude-longitude coordinates."""
     R = 3963  # radius of Earth (miles)
