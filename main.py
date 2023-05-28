@@ -285,13 +285,13 @@ if __name__ == '__main__':
     tsp = TravellingSalesmanProblem(citys, noHubCity, hubCity, p, dis, thoughout)
     tsp.Tmax = 2200000000
     tsp.Tmin = 1800000000
-    tsp.steps = 200000
+    tsp.steps = 100000
     # tsp.set_schedule(tsp.auto(minutes=0.2))
     # # since our state is just a list, slice is the fastest way to copy
     tsp.copy_strategy = "slice"
     state, e = tsp.anneal()
     print(citys)
-    for i in range(citys):
+    for i in range(len(citys)):
         if i== citys[i]:print(i,"是枢纽机场")
         else:print(i,"是非枢纽机场,它所连接的枢纽机场是",citys[i])
     print("energy-end:",cal(citys,dis, thoughout, noHubCity, hubCity))
